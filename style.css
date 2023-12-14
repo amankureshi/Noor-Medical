@@ -308,6 +308,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 400px;
+    border: 2px solid silver;
 }
 
 
