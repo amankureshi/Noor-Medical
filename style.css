@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin: 25px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+
+}
+
+section h2 {
+    color: #444444;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 3px;
+    background: #3fbbc0 !important;
+    bottom: 0;
+}
+
+
+/*<----------- Scroll Arrow Button ------------>*/
+#topBtn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #3FBBC0;
+    bottom: 40px;
+    right: 10px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    display: none;
+    z-index: 996;
+}
+
+#topbar {
+    background: #3fbbc0;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 996;
+    transition: all 0.5s ease-in-out;
+}
+
+#topbar.topbar-scrolled {
+    top: -40px;
+
+}
+
+#topbar i {
+    padding-right: 6px;
+    line-height: 0;
+}
+
+/*<----------- Navbar ------------>*/
+
+.nav-link:focus {
+    color: black !important;
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.white {
+    background-color: white;
+}
+
+.nav_section {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    transition: all 0.5s ease-in-out;
+    animation: moveDown 0.5s ease-in-out;
+}
+
+.nav_section .navbar-brand {
+    color: rgb(59, 56, 56);
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.navbar .container {
+    padding: 3px;
+}
+
+.navbar ul li a {
+    color: #626262;
+    white-space: nowrap;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.navbar ul li a:hover {
+    color: #3FBBC0;
+}
+
+.btn-submit {
+    background-color: #3FBBC0;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+
+/*<----------- Carousel/SLider Section ------------>*/
+
+.carousel-inner h2,
+p {
+    color: black;
+}
+
+.carousel-inner h2 {
+    font-weight: 700;
+}
+
+.carousel-caption {
+    border-top: 3px solid #3FBBC0;
+    background-color: rgba(255, 255, 255, 0.9);
+    max-height: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 120px;
+}
+
+/*--- carouse-Button ----*/
+.carousel-caption .read-more {
+    background-color: #3FBBC0;
+    color: white;
+    padding: 10px
+}
+
+
+
+.carousel-control-prev-icon {
+
+    color: black;
+
+    background-color: #3FBBC0;
+    border-radius: 50%;
+    width: 200px;
+    padding: 20px;
+}
+
+.carousel-control-next-icon {
+    color: black;
+    background-color: #3FBBC0;
+    border-radius: 50%;
+    width: 200px;
+    padding: 20px;
+}
+
+.carousel-control-prev-icon:hover {
+    background-color: #73b6b8;
+}
+
+.carousel-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 500px;
+}
+
+/*<----------- featured-services Section ------------>*/
+
+.featured-services .icon i {
+    font-size: 48px;
+    line-height: 1;
+    color: #3fbbc0;
+}
+
+.featured-services .icon-box {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+/*<----------- Emergency-Section ------------>*/
+
+.emergency-text {
+    background-color: #3FBBC0;
+}
+
+.btn-emergency {
+    color: white;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 10px;
+    border: 3px solid white;
+}
+
+.btn-emergency:hover {
+    background-color: #fff;
+    color: #3FBBC0;
+    transition: 0.5s;
+}
+
+.emergency-text {
+    background-color: #3fbbc0;
+}
+
+.emergency .emergency-text h2 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.emergency .emergency-text p {
+    color: #fff;
+}
+
+.emergency button {
+    background-color: transparent;
+    border-radius: 40px;
+    padding: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: larger;
+}
+
+.emergency button:hover {
+    background-color: white;
+    color: #3fbbc0;
+    transition: all 0.6s ease-in-out;
+}
+
+
+/*<----------- About-Section ------------>*/
+
+.about-imag-section img {
+    max-width: 100%;
+}
+
+.about-icon i {
+    color: #3fbbc0;
+    border: 1px solid #3fbbc0;
+    border-radius: 50px;
+    padding: 3px;
+}
+
+.about-icon li {
+    list-style: none;
+    padding: 3px;
+    margin: 10px;
+}
+
+/*<------ Count-section ------>*/
+
+.featured-text button {
+    border: 2px solid red;
+}
+
+/*<----------- Featured ------------>*/
+
+
+.features .icon-box i {
+    font-size: 48px;
+    float: left;
+    color: rgb(63, 187, 192);
+}
+
+.features .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0px 10px 60px;
+}
+
+.features .icon-box p {
+    text-align: justify;
+    font-size: 15px;
+    color: rgb(132, 132, 132);
+    margin-left: 60px;
+}
+
+.features .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+
+
+/*<--------- Service-Section --------->*/
+.services h2 {
+    font-weight: bold;
+    color: #444444;
+}
+
+.services h2::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 3px;
+    background: #3fbbc0 !important;
+    bottom: 0;
+    align-items: center;
+}
+
+.services .icon i {
+    font-size: 36px;
+    line-height: 0;
+}
+
+.services .icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.5s;
+    color: #3fbbc0;
+    overflow: hidden;
+    box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .ser {
+    text-align: center;
+    justify-content: center;
+}
+
+/* ---- Appointment section ----*/
+.appointment-section {
+    background-color: #F7FCFC;
+}
+
+.appointment-btn {
+    background-color: #3fbbc0;
+    padding: 10px 35px;
+    border-radius: 50px;
+    color: #fff;
+    border: 0;
+    transition: 0.4s;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(29, 178, 219, 0.25) !important;
+}
+
+
+
+/*<----------- Midea-Query-Section ------------>*/
+@media (max-width:768px) {
+
+    .carousel-caption p {
+        /* white-space: nowrap; */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
+
+@media (max-width:1100px) {
+
+    .carousel-caption p {
+        -white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .map-responsive iframe {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:990px) {
+    .counter {
+        margin-bottom: 40px;
+    }
+}
+
+/* --------Doctors ------ */
+
+.doctors-bg {
+    background-color: #f7fcfc;
+    padding: 2rem;
+}
+
+.doctors-box,
+.doctors-box img {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    overflow: hidden;
+}
+
+.doctors-box img {
+    width: 100%;
+}
+
+.doctors-containe {
+    padding: 10px;
+    text-align: center;
+}
+
+.doctors-containe h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+
+
+/* <----- Price-Section ------>*/
+
+.main-box {
+    border: 2px solid #f8f8f8;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.priceing-section .Advanced {
+    width: 200px;
+    position: absolute;
+    top: 18px;
+    right: -68px;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-size: 14px;
+    padding: 1px 0 3px 0;
+    background: #3fbbc0;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+}
+
+.main-box .active {
+    background-color: #3FBBC0;
+    color: white;
+    border-radius: 5px 5px 1px 1px;
+}
+
+.main-box h3 {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #777777;
+}
+
+.main-box h1 {
+    color: #59c4c9;
+}
+
+.btn-last {
+    background: #f8f8f8;
+}
+
+.main-box .btn-last {
+    padding: 20px 15px;
+    text-align: center;
+}
+
+
+.btn-last a {
+    text-decoration: none;
+}
+
+.btn-buy {
+    padding: 8px 35px 10px 35px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    transition: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+    background-color: #3fbbc0;
+}
+
+.btn-buy:hover {
+    color: white;
+}
+
+
+.close {
+    font-size: 1.5rem;
+}
+
+
+/* <--- Price-Section End--->*/
+
+/*<----------- Image-gallery ------------>*/
+
+.image-gallery img {
+    opacity: 0.8;
+    cursor: pointer;
+    width: 223px;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.1);
+
+}
+
+
+/* <------FAQ Form Changes ------->*/
+
+.accordion-button:not(.collapsed) {
+    color: #3fbbc0 !important;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion {
+    --bss-accordion-btn-focus-box-shadow: none;
+}
+
+
+
+/* <------------------Contact-Section---------------->*/
+
+.contact_section {
+    position: relative;
+}
+
+.contact_section .container-bg {
+    -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact_section .row {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.contact_section form {
+    padding-right: 45px 20px;
+    padding: 35px;
+}
+
+.contact_section input {
+    width: 100%;
+    border: 1px solid rgb(61, 126, 150);
+    height: 50px;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    background-color: transparent;
+    outline: line;
+    color: #101010;
+    border-radius: 2px;
+}
+
+.contact_section ::placeholder {
+    font-size: 20px;
+}
+
+.contact_section input.message-box {
+    height: 150px;
+}
+
+.contact_section button {
+    display: inline-block;
+    padding: 12px 45px;
+    background-color: #3FBBC0;
+    color: #fff;
+    border: 2px solid #3FBBC0;
+    border-radius: 5px;
+    display: block;
+    color: white;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    margin: 35px auto 0 auto;
+}
+
+.contact_section button:hover {
+    background-color: #93c2c5;
+    border-color: #93c2c5;
+}
+
+/*<------------ Footer Section------------->*/
+
+footer {
+    border-radius: 10px;
+    margin-top: 100px;
+    background-color: #F6F6F6;
+}
+
+.footer-icon i {
+    background-color: #3FBBC0;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+footer .prdc a {
+    text-decoration: none;
+}
+
+form input:hover {
+    background: transparent;
+}
+
+input:focus-visible {
+    border: none;
+}
+
+.featured-services .counter .counter-value {
+    font-size: 30px;
+    font-weight: 600;
+}
